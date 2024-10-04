@@ -46,6 +46,8 @@ namespace Project1 {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
 
+	private: System::Windows::Forms::Label^ label6;
+
 	private:
 		/// <summary>
 		/// Обязательная переменная конструктора.
@@ -70,6 +72,7 @@ namespace Project1 {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -130,6 +133,8 @@ namespace Project1 {
 			// 
 			// button1
 			// 
+			this->button1->Cursor = System::Windows::Forms::Cursors::Cross;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.125F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->Location = System::Drawing::Point(29, 509);
@@ -142,6 +147,8 @@ namespace Project1 {
 			// 
 			// button2
 			// 
+			this->button2->Cursor = System::Windows::Forms::Cursors::Cross;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.125F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button2->Location = System::Drawing::Point(29, 598);
@@ -155,11 +162,11 @@ namespace Project1 {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.875F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label4->Location = System::Drawing::Point(22, 23);
+			this->label4->Location = System::Drawing::Point(19, 124);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(197, 42);
+			this->label4->Size = System::Drawing::Size(321, 67);
 			this->label4->TabIndex = 8;
 			this->label4->Text = L"Сложение";
 			// 
@@ -175,12 +182,27 @@ namespace Project1 {
 			this->comboBox1->TabIndex = 9;
 			this->comboBox1->Text = L"Сложение";
 			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Cursor = System::Windows::Forms::Cursors::No;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 17, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label6->Location = System::Drawing::Point(-6, 9);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(272, 60);
+			this->label6->TabIndex = 11;
+			this->label6->Text = L"Dizarizago";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(192, 192);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(76)), static_cast<System::Int32>(static_cast<System::Byte>(104)),
+				static_cast<System::Int32>(static_cast<System::Byte>(228)));
 			this->ClientSize = System::Drawing::Size(503, 703);
+			this->Controls->Add(this->label6);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button2);
@@ -191,6 +213,7 @@ namespace Project1 {
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
+			this->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
@@ -258,5 +281,6 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	textBox3->Text = L" ";
 	label4->Text = L" ";
 }
+
 };
 }
